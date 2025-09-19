@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Bola Loncat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: black;
+      color: white;
+    }
+    canvas {
+      background: #222;
+      display: block;
+      margin: 20px auto;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Game Bola Loncat 🎮</h1>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <p>Tekan ⬆️ untuk loncat!</p>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    let bola = { x: 50, y: 300, r: 20, dy: 0 };
+    let gravity = 0.6;
+    let jump = -12;
+
+    document.addEventListener("keydown", e => {
+      if (e.code === "ArrowUp" && bola.y > 300) {
+        bola.dy = jump;
+      }
+    });
+
+    function update() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // bola
+      ctx.beginPath();
+      ctx.arc(bola.x, bola.y, bola.r, 0, Math.PI * 2);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      // physics
+      bola.dy += gravity;
+      bola.y += bola.dy;
+
+      if (bola.y > 300) {
+        bola.y = 300;
+        bola.dy = 0;
+      }
+
+      requestAnimationFrame(update);
+    }
+    update();
+  </script>
+</body>
+</html>
