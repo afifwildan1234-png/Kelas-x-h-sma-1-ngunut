@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelas X-H</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #000;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    header {
+      background: #0077cc;
+      color: black;
+      padding: 20px;
+    }
+    header img {
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    button {
+      padding: 10px 20px;
+      margin: 20px 0;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+    /* Struktur Organisasi */
+    .struktur {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 40px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      padding: 15px;
+      color: black;
+    }
+    .card img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 5px 0;
+      color: #0077cc;
+    }
+    .card p {
+      margin: 0;
+      color: #333;
+    }
+    /* Galeri Foto */
+    .gallery {
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 90%;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Website Kelas X-H</h1>
+    <p>Kenangan kelas X-H selama satu tahun</p>
+    <img src="kelas.jpg" alt="Foto Kelas X-H" width="300">
+  </header>
+
+  <main>
+    <h2>Selamat Datang</h2>
+    <p>Angkatan 2025/2026</p>
+    <button onclick="ucapan()">Klik Saya</button>
+
+    <!-- Struktur Organisasi -->
+    <h2>Struktur Organisasi Kelas</h2>
+    <div class="struktur">
+      <div class="card">
+        <img src="guru.jpg" alt="Guru Kelas">
+        <h3>Pak/Ibu Guru</h3>
+        <p>Wali Kelas</p>
+      </div>
+      <div class="card">
+        <img src="ketua.jpg" alt="Ketua Kelas">
+        <h3>Nama Ketua</h3>
+        <p>Ketua Kelas</p>
+      </div>
+      <div class="card">
+        <img src="wakil.jpg" alt="Wakil Ketua">
+        <h3>Nama Wakil</h3>
+        <p>Wakil Ketua</p>
+      </div>
+      <div class="card">
+        <img src="bendahara1.jpg" alt="Bendahara 1">
+        <h3>Nama Bendahara 1</h3>
+        <p>Bendahara 1</p>
+      </div>
+      <div class="card">
+        <img src="bendahara2.jpg" alt="Bendahara 2">
+        <h3>Nama Bendahara 2</h3>
+        <p>Bendahara 2</p>
+      </div>
+      <div class="card">
+        <img src="sekretaris1.jpg" alt="Sekretaris 1">
+        <h3>Nama Sekretaris 1</h3>
+        <p>Sekretaris 1</p>
+      </div>
+      <div class="card">
+        <img src="sekretaris2.jpg" alt="Sekretaris 2">
+        <h3>Nama Sekretaris 2</h3>
+        <p>Sekretaris 2</p>
+      </div>
+    </div>
+
+    <!-- Galeri Foto -->
+    <h2>Kenangan Kelas</h2>
+    <div class="gallery">
+      <img src="sa.jpg" alt="Kenangan 1">
+      <img src="ga.jpg" alt="Kenangan 2">
+      <img src="ni.jpg" alt="Kenangan 3">
+      <img src="rey.jpg" alt="Kenangan 4">
+    </div>
+  </main>
+
+  <script>
+    function ucapan() {
+      alert("Memori kelas X-H tersimpan selamanya!");
+    }
+  </script>
+</body>
+</html>
