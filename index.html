@@ -14,7 +14,7 @@
       color: white;
     }
     header {
-      background: #005fa3;
+      background: #0077cc;
       color: black;
       padding: 20px;
     }
@@ -34,22 +34,6 @@
     }
     button:hover {
       background: #005fa3;
-    }
-    /* Galeri Foto */
-    .gallery {
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      max-width: 90%;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
     /* Struktur Organisasi */
     .struktur {
@@ -81,12 +65,28 @@
       margin: 0;
       color: #333;
     }
+    /* Galeri Foto */
+    .gallery {
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 90%;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Halo, ini adalah website tentang kelas X-H</h1>
-    <p>Disini kenangan kelas X-H selama satu tahun</p>
+    <h1>Website Kelas X-H</h1>
+    <p>Kenangan kelas X-H selama satu tahun</p>
     <img src="kelas.jpg" alt="Foto Kelas X-H" width="300">
   </header>
 
@@ -95,7 +95,8 @@
     <p>Angkatan 2025/2026</p>
     <button onclick="ucapan()">Klik Saya</button>
 
- <h2>Struktur Organisasi Kelas</h2>
+    <!-- Struktur Organisasi -->
+    <h2>Struktur Organisasi Kelas</h2>
     <div class="struktur">
       <div class="card">
         <img src="guru.jpg" alt="Guru Kelas">
@@ -132,8 +133,10 @@
         <h3>Nama Sekretaris 2</h3>
         <p>Sekretaris 2</p>
       </div>
+    </div>
 
     <!-- Galeri Foto -->
+    <h2>Kenangan Kelas</h2>
     <div class="gallery">
       <img src="sa.jpg" alt="Kenangan 1">
       <img src="ga.jpg" alt="Kenangan 2">
@@ -150,4 +153,3 @@
   </script>
 </body>
 </html>
-
